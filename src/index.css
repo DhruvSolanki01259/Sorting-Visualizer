@@ -1,0 +1,82 @@
+.visualizer-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 380px;
+  width: 100%;
+  padding: 12px;
+  gap: 4px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  overflow: hidden;
+  transition: background 0.3s, color 0.3s;
+}
+
+.visualizer-container.dark {
+  background: #111827;
+  border-color: #374151;
+}
+
+.bar-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.bar {
+  background: #3b82f6;
+  border-radius: 3px 3px 0 0;
+  transition: height 200ms ease, background-color 150ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+.bar-value {
+  position: absolute;
+  top: -18px;
+  font-size: 12px;
+  color: #374151;
+}
+
+.visualizer-container.dark .bar-value {
+  color: #f3f4f6;
+}
+
+.bar-compare {
+  background: #ef4444;
+  /* red */
+}
+
+.bar-swap {
+  background: #10b981;
+  /* green */
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.controls label {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.controls button {
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.controls input[type=range],
+.controls input[type=text] {
+  padding: 4px;
+}
